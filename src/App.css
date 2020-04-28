@@ -1,3 +1,16 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App-Cold {
+  background-image: url("./Assets/cold.jpg");
+}
+.App-Hot {
+  background-image: url("./Assets/hot.jpg");
+}
+.App-Normal {
+  background-image: url("./Assets/normal.jpg");
 }

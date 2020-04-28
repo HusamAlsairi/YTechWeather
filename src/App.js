@@ -33,6 +33,16 @@ class App extends Component {
     });
   };
 
+  selectBackground = (temp, error) => {
+    return temp < 16 && error === false
+      ? "App App-Cold"
+      : temp > 22 && error === false
+      ? "App App-Hot"
+      : temp < 23 && temp > 15 && error === false
+      ? "App App-Normal"
+      : "App";
+  };
+
   getWeather = () => {
     const { city, country } = this.state;
     axios
@@ -57,7 +67,7 @@ class App extends Component {
   render() {
     const { city, country, temp, min, max, description, error } = this.state;
     return (
-      <div className="App">
+      <div className={this.selectBackground(temp, error)}>
         <Header />
         <Inputs
           handleChange={this.onChangeData}
