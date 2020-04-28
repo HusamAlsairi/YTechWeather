@@ -36,9 +36,9 @@ class App extends Component {
   selectBackground = (temp, error) => {
     return temp < 16 && error === false
       ? "App App-Cold"
-      : temp > 22 && error === false
+      : temp > 25 && error === false
       ? "App App-Hot"
-      : temp < 23 && temp > 15 && error === false
+      : temp < 26 && temp > 15 && error === false
       ? "App App-Normal"
       : "App";
   };
